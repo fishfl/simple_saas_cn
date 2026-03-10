@@ -121,7 +121,10 @@ export default function Home() {
             </Link>
         </div>
       </section>
-      <PricingSection />    </div>
+
+      <PricingSection/>
+
+    </div>
   );
 }
 
