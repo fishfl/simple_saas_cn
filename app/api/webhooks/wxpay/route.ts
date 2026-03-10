@@ -11,6 +11,8 @@ export async function POST(request: Request) {
     const body = await request.text();
     const event = JSON.parse(body);
 
+    console.log('Received WeChat Pay webhook:', event);
+    
     // 只处理支付成功事件
     if (event.event_type !== 'TRANSACTION.SUCCESS') {
       return NextResponse.json({ code: 'SUCCESS', message: 'ignored' });
