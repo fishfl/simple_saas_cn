@@ -31,7 +31,7 @@ export const signUpAction = async (formData: FormData) => {
     console.error(error.code + " " + error.message);
     return encodedRedirect("error", "/sign-up", error.message);
   } else {
-    return encodedRedirect("success", "/dashboard", "注册成功，欢迎使用！");
+    return encodedRedirect("success", "/sign-in", "请前往邮箱验证后登录");
   }
 };
 
